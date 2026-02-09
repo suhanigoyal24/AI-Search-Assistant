@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Jiji</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Landing section -->
+    <div class="landing">
+      <h1>JIJI</h1>
+      <h3>Your AI Friend</h3>
+      <img src="{% static 'images/robot.png' %}" alt="Robot" class="robot-photo">
+      <p class="landing-description">Hi ask me about anything and I'll provide you helpful explanations and resources.</p>
+    </div>
+
+    <!-- Chat section -->
+    <div id="chat-box"></div>
+    <div id="typing-indicator" class="hidden">Jiji is typing...</div>
+
+    <!-- Input form -->
+    <form id="ask-form">
+      <input type="text" id="user-input" placeholder="Type your question... e.g., explain RAG" required autocomplete="off">
+      <button type="submit">Ask</button>
+    </form>
+  </div>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

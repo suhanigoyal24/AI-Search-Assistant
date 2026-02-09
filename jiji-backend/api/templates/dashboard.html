@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Jiji</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Ask Jiji</h1>
+    <div id="chat-box"></div>
+    <div id="typing-indicator" class="hidden">Jiji is typing...</div>
+
+    <form id="ask-form">
+      <input type="text" id="user-input" placeholder="Type your question..." required autocomplete="off">
+      <button type="submit">Ask</button>
+    </form>
+  </div>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
