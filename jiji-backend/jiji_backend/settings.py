@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'jiji_backend.urls'
@@ -126,4 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # optional for dev: tell Django where to find static files
 STATICFILES_DIRS = [
     BASE_DIR / 'api' / 'static',  # your static folder path
+
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
